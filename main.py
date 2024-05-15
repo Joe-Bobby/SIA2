@@ -1,9 +1,3 @@
-import pandas as pd
-import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.linear_model import LogisticRegression
-import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import tkinter as tk
 from regresion_logistica import RegresionLogistica
@@ -13,7 +7,7 @@ def regresion_logistica():
     # Crear instancias de la clase RegresionLogistica
     visualizar1 = RegresionLogistica("zoo.csv", [8,13])
     visualizar1.entrenar_modelo()
-
+    
     # Establecer un tamaño fijo para las figuras
     figura1 = visualizar1.dibujar_clasificacion()
 
@@ -30,7 +24,7 @@ def regresion_logistica():
 
 # Crear la ventana de Tkinter
 root = tk.Tk()
-root.title("Visualización de Regresión Logística")
+root.title("Regresión Logística clasificando animales depredadores y presas")
 
 # Crear y colocar el botón para mostrar los gráficos
 btn_mostrar = tk.Button(root, text="Regresion Logistica", command=regresion_logistica)
